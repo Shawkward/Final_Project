@@ -14,6 +14,35 @@
 			<h1>KEVIN SHAW <span>//</span> GRAPHIC DESIGNER<br>
 				<div class="title_job">WEB DEVELOPER</div>
 			</h1>
+			
+		<!-- BURGER MENU -->
+
+			<div class="burger">
+				<a href="#menu">
+					<img src="images/threelines.png" alt="This is the drop down menu">
+				</a>
+				<div class="burger_logo">
+					<img src="images/shaw.svg">
+					<h3>Kevin Shaw <span>Graphics</span><h3>
+				</div>
+			</div>	
+
+		<!-- BURGER MENU ENDS-->
+
+		<!-- DROP DOWN BURGER MENU -->
+			<div class="drop_down">
+				<ul class="burger_menu">
+						<li><a href="#home">top</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#career">Career</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>	
+			</div>
+
+		<!-- DROP DOWN BURGER MENU ENDS -->
+
 			<ul class="nav">
 				<li class="top_nav"><a href="#home">Home</a></li>
 					<li class="top_nav"><a href="">About</a>
@@ -154,7 +183,9 @@ Prior to my position with ClubLink, for six years I was the Art Director of Clea
 
 	<footer>
 
-<!--- ---------- THIS IS THE CONTACT SECTION ----------- -->
+<!---         THIS IS THE CONTACT SECTION  -->
+
+
 		<section class="contact" ID="contact">
 			<div class="title_smaller"><span class="square_contact"></span>Contact</div>
 		
@@ -173,17 +204,9 @@ Prior to my position with ClubLink, for six years I was the Art Director of Clea
 			<input type="address" class="contact_input" name="email">
 			<input type="submit" value="SUBMIT" class="submit_button">
 		</form>	
-		<div class="bottom">KEVIN SHAW <span>//</span> GRAPHIC DESIGNER<span>//</span> WEB DEVELOPER <span>//</span> 6 William Smart, Tottenham ON., L0G 1W0</div>
+		<div class="bottom">KEVIN SHAW <span>//</span> GRAPHIC DESIGNER <span>//</span> WEB DEVELOPER <span>//</span> 6 William Smart, Tottenham ON., L0G 1W0</div>
 				
 	</footer>
-
-
-
-
-
-
-
-		</div>	
 
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -196,23 +219,18 @@ Prior to my position with ClubLink, for six years I was the Art Director of Clea
 			        var target = $(this.hash);
 			        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			           if (target.length) {
+			           	var calcWidth = $(window).innerWidth() <= 768 ? target.offset().top-100 : target.offset().top-149;
 			             $('html,body').animate({
-			                 scrollTop: target.offset().top-149
+		             		scrollTop: calcWidth
 			            }, 1300	);
 			            return false;
+
 			        }
 			    }
 			});
 		</script>
 
 		<script src="flickity.min.js"></script>
-
-		<script>
-			$(function() {
-				
-			});
-		</script>
-
 
 	</body>
 

@@ -58,6 +58,9 @@
 
 
 /*THIS IS THE NAV SECTION*/
+			.burger, .drop_down {
+				display:none;
+			}
 
 			.nav {
 				text-align: center;
@@ -145,8 +148,9 @@
 				background-image: url(images/IMG_4514.JPG);
 				background-attachment: fixed;
 				background-repeat: no-repeat;
-				background-size: cover;
-
+				max-width: 940px;
+				background-position: center;
+				background-color: black;
 			}
 
 			.intro h1  {
@@ -352,11 +356,19 @@ section.quote_graphic {
 /*THIS IS THE START OF THE GALLERY*/
 
 
+
 .portfolio {
 /*	border-top: 10px double darkgrey;
 */	background-image: url(images/brickwall.png);
 	font-family: 'Lato', sans-serif;
 }
+
+.gallery {
+	width: 90%;
+	margin: 0 auto;
+}
+
+
 
 .gallery img {
 	padding-bottom: 50px;
@@ -468,6 +480,10 @@ footer {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 	
+	.burger, .drop_down {
+		display:none;
+	}
+
 
 /* TOP NAV */
 .top_nav {
@@ -483,17 +499,24 @@ footer {
 		height: 50px;
 	}	
 
-
+	ul.nav li ul.sub_menu {
+    	left: -27px;
+   		top: 43px;
+   	}
 
 /*INTRO SECTION*/
 	.wrapper { 
 		padding-top: 0;
+		margin-top: 0;	
 		width:100%;
 	}
 
 	.intro {
-		background-size: 100% 100%;
-	}
+		background-image: url(images/IMG_4514-768.jpg);	
+		background-position: top;
+		background-attachment: scroll;
+
+			}
 
 	.intro h1 {
 		padding-top: 17%;
@@ -527,19 +550,150 @@ footer {
 section.quote_graphic h1.quote {
 	text-align: center;
 	padding: 0;
-	padding-top: 150px;
+	padding-top: 125px;
 	font-size: 25px;
 	width: 50%;
 	margin: 0 auto;
 }
 
+/* FLICKITY CHANGES*/
 
+
+.gallery {
+	width: 100%;
+}
+
+
+.flickity-prev-next-button.previous { left: 0; }
+.flickity-prev-next-button.next { right: 0px; }
 
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+/* TOP NAV */
+
+	.burger {
+		width: 100%;
+		display: inline-block;
+		margin: 0 auto;
+	}
+
+	.burger img {
+		width:40px;
+		height:40px;
+		display: inline;
+	}
+
+	.burger_logo {
+		width:40px;
+		height: 40px;
+		display: inline;
+	}
+
+.burger_logo h3 {
+	font-family: 'Lato', sans-serif;
+	color: white;
+	display: inline;
+	font-weight: 100;
+	font-size: 20px;
+	text-transform: uppercase;
+
 }
 
+/*DROP DOWN NAV SECTION*/
+
+.drop_down {
+	display: none;
+}
+
+.top_nav div.top div.burger a:hover .drop_down {
+	display: inline-block;
+}
+
+
+
+div.drop_down ul.burger_menu li:hover a{
+		color: red;
+	}
+
+.top ul.burger_menu li {
+		list-style: none;
+	}
+
+	.top ul.burger_menu a {
+		display: block;
+		color: white;
+		text-decoration: none;
+		font-family: 'Lato', sans-serif;
+		text-transform: uppercase;
+		font-weight: 300;
+		padding:10px;
+	}
+
+	ul.nav {
+		display: none;
+	}
+
+	.top h1 {
+		display: none;
+	}
+
+
+/* END OF NAV*/
+
+ /* START OF INTRO SECTION*/
+
+ .about_info	 {
+ 	max-width: 480px;
+ }
+
+.flexContainer ul {
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-justify-content: flex-start;
+   justify-content: flex-start;
+
+}
+
+
+.flexContainer ul li {
+	margin: 5px 0;
+	font-weight: 700;
+
+}
+
+
+section.quote_graphic {
+padding-bottom: 0;
+}
+
+section.quote_graphic h1.quote {
+	padding:50px;
+	width: 85%;
+}
+
+.gallery {
+	width: 90%;
+}
+
+
+
+}
+
+/*QUESTIONS
+
+How do we adjust the javascript for the target offset? for the nav being smaller now?
+
+my top image seems to be a bit wonky
+
+
+
+
+
+
+
+*/
 
 
 
