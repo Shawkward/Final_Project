@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Kevin Shaw</title>
 		<link rel="stylesheet" href="flickity.css">
 		<link rel="stylesheet" href="project2.css">
@@ -18,8 +19,7 @@
 		<!-- BURGER MENU -->
 
 			<div class="burger">
-				<a href="#menu">
-					<img src="images/threelines.png" alt="This is the drop down menu">
+				<a href="" class="burger-menu"><img src="images/threelines.png" alt="This is the drop down menu">
 				</a>
 				<div class="burger_logo">
 					<img src="images/shaw.svg">
@@ -219,7 +219,19 @@ Prior to my position with ClubLink, for six years I was the Art Director of Clea
 			        var target = $(this.hash);
 			        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			           if (target.length) {
-			           	var calcWidth = $(window).innerWidth() <= 768 ? target.offset().top-100 : target.offset().top-149;
+			           	var calcWidth = 0;
+
+
+			           	if ($(window).innerWidth() <= 480) {
+			           		calcWidth = target.offset().top-62;
+			           	} else if ($(window).innerWidth() <= 768) {
+			           		calcWidth = target.offset().top-100;
+			           	} else {
+			           		calcWidth = target.offset().top-149;
+			           	}
+
+						// var calcWidth = $(window).innerWidth() <= 768 ? target.offset().top-100 : target.offset().top-149;
+
 			             $('html,body').animate({
 		             		scrollTop: calcWidth
 			            }, 1300	);
@@ -228,6 +240,25 @@ Prior to my position with ClubLink, for six years I was the Art Director of Clea
 			        }
 			    }
 			});
+
+		$(function() {
+			$('.burger-menu').on('click', function(e){
+				e.preventDefault();
+				$('.drop_down').toggleClass('open');
+			});
+	
+			$('.burger_menu a').on('click', function(){
+				$('.drop_down').removeClass('open');
+			})
+
+
+		});
+
+
+
+
+
+
 		</script>
 
 		<script src="flickity.min.js"></script>

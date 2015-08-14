@@ -148,9 +148,10 @@
 				background-image: url(images/IMG_4514.JPG);
 				background-attachment: fixed;
 				background-repeat: no-repeat;
-				max-width: 940px;
-				background-position: center;
-				background-color: black;
+				background-position: center 146px;
+				background-size: auto 52%;
+
+			
 			}
 
 			.intro h1  {
@@ -480,10 +481,6 @@ footer {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 	
-	.burger, .drop_down {
-		display:none;
-	}
-
 
 /* TOP NAV */
 .top_nav {
@@ -513,8 +510,9 @@ footer {
 
 	.intro {
 		background-image: url(images/IMG_4514-768.jpg);	
-		background-position: top;
-		background-attachment: scroll;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+		background-position: center 100px;
 
 			}
 
@@ -571,6 +569,10 @@ section.quote_graphic h1.quote {
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
+.wrapper {
+	width: 100%;
+}
+
 /* TOP NAV */
 
 	.burger {
@@ -601,15 +603,24 @@ section.quote_graphic h1.quote {
 
 }
 
+.career_info li{
+	width: 80%;
+}
+
 /*DROP DOWN NAV SECTION*/
 
-.drop_down {
+/*.drop_down {
 	display: none;
 }
 
-.top_nav div.top div.burger a:hover .drop_down {
-	display: inline-block;
+.burger:hover + .drop_down {
+	display: block;
 }
+
+*/
+
+
+
 
 
 
@@ -621,28 +632,39 @@ div.drop_down ul.burger_menu li:hover a{
 		list-style: none;
 	}
 
-	.top ul.burger_menu a {
-		display: block;
-		color: white;
-		text-decoration: none;
-		font-family: 'Lato', sans-serif;
-		text-transform: uppercase;
-		font-weight: 300;
-		padding:10px;
-	}
+.top ul.burger_menu a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	font-weight: 300;
+	padding:10px;
+}
 
-	ul.nav {
-		display: none;
-	}
+ul.nav {
+	display: none;
+}
 
-	.top h1 {
-		display: none;
-	}
+.top h1 {
+	display: none;
+}
 
 
 /* END OF NAV*/
 
  /* START OF INTRO SECTION*/
+
+	.intro {
+		background-image: url(images/IMG_4514-768.jpg);	
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: center 50px;
+
+			}
+
+
+
 
  .about_info	 {
  	max-width: 480px;
@@ -677,7 +699,9 @@ section.quote_graphic h1.quote {
 	width: 90%;
 }
 
-
+.open {
+	display:block;
+}
 
 }
 
